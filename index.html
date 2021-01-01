@@ -9,29 +9,59 @@
 
     <style>
 
+        body {
+            background-color: black;
+        }
+
+        .button {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border-radius: 50%;
+            top: 14px;
+        }
+
+        #redButton {
+            background-color: #ff6464;
+            left: 20px;
+        }
+
+        #greenButton {
+            background-color: #64ff64;
+            left: 40px;
+        }
+
+        #yellowButton {
+            background-color: #ffff64;
+            left: 60px;
+        }
+
         #terminal-body {
             width: 500px;
             height: 250px;
             background-color: #242629;
             border: 5px solid #ddd;
             border-radius: 20px;
-
+            position: absolute;
         }
 
         #terminal-header {
             width: 510px;
             height: 25px;
             background-color: #ddd;
-            float: left;
+            /* float: left; */
+            position: absolute;
             border-radius: 20px 20px 0px 0px;
         }
 
     </style>
 
-    <div id="terminal">
-        <div></div>
-        <div id="terminal-header"></div>
+    <div id="terminalHere">
         <div id="terminal-body"></div>
+        <div id="terminal-header"></div>
+        <div id="redButton" class="button"></div>
+        <div id="greenButton" class="button"></div>
+        <div id="yellowButton" class="button"></div>
     </div>
     
 </body>
