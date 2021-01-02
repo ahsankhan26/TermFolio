@@ -3,94 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal</title>
+    <title>Terminal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <style>
-
-        body {
-            background-color: black;
-        }
-
-        #terminalContainer {
-            width: 100%;
-            height: 100%;
-        }
-
-        .responsive {
-            width: 100%;
-            max-width: 900px;
-            height: auto;
-        }
-
-        img.responsive{
-            display: block;
-            margin: auto;
-        }
-
-        /* CSS Terminal Start */
-        /*
-        #terminalHere {
-            width: 100%;
-        }
-
-        .button {
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            border-radius: 50%;
-            top: 14px;
-        }
-
-        #redButton {
-            background-color: #ff6464;
-            left: 20px;
-        }
-
-        #greenButton {
-            background-color: #64ff64;
-            left: 40px;
-        }
-
-        #yellowButton {
-            background-color: #ffff64;
-            left: 60px;
-        }
-
-        #terminal-body {
-            width: 500px;
-            height: 250px;
-            background-color: #242629;
-            border: 5px solid #ddd;
-            border-radius: 20px;
-            position: absolute;
-        }
-
-        #terminal-header {
-            width: 510px;
-            height: 25px;
-            background-color: #ddd;
-            position: absolute;
-            border-radius: 20px 20px 0px 0px;
-        }*/
-        /* CSS Terminal End */
-
-    </style>
-
-    <div id="terminalContainer">
-        <img src="terminal.png" class="responsive">
-    </div>
-
     <!-- CSS Terminal Start  -->
-    <!-- <div id="terminalHere">
-        <div id="terminal-body"></div>
-        <div id="terminal-header"></div>
-        <div id="redButton" class="button"></div>
-        <div id="greenButton" class="button"></div>
-        <div id="yellowButton" class="button"></div>
-    </div> -->
+    <div id="terminalContent">
+        <div class="container">
+            
+            <div id="terminalHeader">
+                <div class="button buttonRed"></div>
+                <div class="button buttonGreen"></div>
+                <div class="button buttonYellow"></div>
+            </div>
+
+            <div id="terminalBody">               
+                Lorem ipsum <input type="text" autofocus>
+            </div>
+
+
+        </div>
+    </div>
     <!-- CSS Terminal End  -->
+
+    <script src="script.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,93 @@
+body {
+    background-color: #16161a;
+    color: #ddd;
+}
+
+#terminalContent {
+    font: 1em Consolas, monaco, monospace;
+    top: 5em;
+    bottom: 6em;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+}
+
+#terminalHeader {
+    height: 1.75em;
+    background-color: #ddd;
+    border-radius: 20px 20px 0 0;
+}
+
+.button {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 8px 5px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.buttonRed {
+    margin-left: 20px;
+    background-color: #ff6464;
+} .buttonRed:hover {transition: 0.2s; background-color: #860000;}
+.buttonGreen {
+    background-color: #64ff64;
+} .buttonGreen:hover {transition: 0.2s; background-color: #008600;}
+.buttonYellow {
+    background-color: #ffff64;
+} .buttonYellow:hover {transition: 0.2s; background-color: #868600;}
+
+#terminalBody {
+    padding: 2% 5% 0 5%;
+    background-color: #242629;
+    height: 30em;
+    border-radius: 0 0 20px 20px;
+    overflow-y: auto;
+    border: solid 5px #ddd;
+}
+
+#BodyContent {
+    float: left;
+}
+
+input {
+    background-color: #242629;
+    border-width: 0;
+    color: #ddd;
+    font: 1em Consolas, monaco, monospace;
+    font-weight: 700;
+}
+input:focus {
+    outline: none;
+}
+ 
+
+
+/* Custom ScrollBar Styling Start */
+
+/* width */
+::-webkit-scrollbar {
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    
+  }
+
+/* Custom ScrollBar Styling End*/
