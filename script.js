@@ -1,10 +1,11 @@
 let input = document.querySelector("input");
 let terminalBody = document.querySelector("#terminalBody");
 
+let commands = new Map();
+commands.set('name', '<br>' + data.name + '<br>');
+commands.set('github', `<br><a href="https://github.com/${data.github}" target="_blank">${data.github}</a><br>`);
+commands.set('help', '<br><br>name<br>clear<br>github<br>');
 
-let string = {
-    name: "Ahsan Khan"
-}
 
 functionCalls();
 
@@ -33,12 +34,30 @@ function checkPressedEnter() {
 function execute(inputValue) {
     let temp = input.value;
     input.remove();
-    terminalBody.innerHTML += "<br>" + temp;
+    terminalBody.innerHTML += temp;
+    checkCommand(temp);
     addInput();
 }
 
+function checkCommand(inputCommand){
+
+    if(commands.has(inputCommand)){
+        console.log(commands.get(inputCommand));
+        terminalBody.innerHTML += commands.get(inputCommand);
+    }
+    else if (inputCommand === 'clear'){
+        terminalBody.innerHTML = '';
+    }
+    else if (inputCommand === ""){
+        terminalBody.innerHTML += '<br>';
+    }
+    else {
+        terminalBody.innerHTML += '<br>' + inputCommand + ' is not recognized as a command, Try \"help\"<br>';
+    }
+}
+
 function addInput() {
-    terminalBody.innerHTML += '<br>Portfolio-Terminal: > <input type="text" autofocus />';
+    terminalBody.innerHTML += ' > <input type="text" autofocus />';
     input = document.querySelector("input");
     input.focus();
     functionCalls();

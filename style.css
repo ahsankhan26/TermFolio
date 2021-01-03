@@ -83,6 +83,7 @@ body {
 }
 
 input {
+    width: 30%;
     background-color: #242629;
     border-width: 0;
     color: #ddd;
@@ -91,6 +92,10 @@ input {
 }
 input:focus {
     outline: none;
+}
+
+a {
+    color: cyan;
 }
  
 
@@ -104,12 +109,14 @@ input:focus {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    
+
+
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    
+
+
   }
   
   /* Handle on hover */
