@@ -31,14 +31,14 @@ function checkPressedEnter() {
 }
 
 function execute(inputValue) {
-
+    let temp = input.value;
     input.remove();
-    terminalBody.innerHTML += "<br>Hello";
+    terminalBody.innerHTML += "<br>" + temp;
     addInput();
 }
 
 function addInput() {
-    terminalBody.innerHTML += '<input type="text" autofocus />';
+    terminalBody.innerHTML += '<br>Portfolio-Terminal: > <input type="text" autofocus />';
     input = document.querySelector("input");
     input.focus();
     functionCalls();
