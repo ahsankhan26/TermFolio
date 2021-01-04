@@ -95,7 +95,11 @@ input:focus {
 }
 
 a {
-    color: cyan;
+    color: #0dd;
+    transition: 0.2s ease-in-out;
+}
+a:hover {
+    color: #EF4F4F;
 }
  
 
