@@ -8,6 +8,10 @@
   <a href="#title"><img src="https://forthebadge.com/images/badges/designed-in-ms-paint.svg"></a>
 </p>
 
+<p align="center">
+<img href="#title" width="75%" src="https://user-images.githubusercontent.com/28962172/103942527-5c248f00-5152-11eb-9010-b2757b652209.png"/>
+</p>
+
 <h1 id="preview" align="center">Preview</h1>
 <p align="center">
   <a href="https://ahsankhan.me/TermFolio"><img src="https://forthebadge.com/images/badges/check-it-out.svg"></a>
