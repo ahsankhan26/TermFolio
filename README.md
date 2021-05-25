@@ -38,20 +38,24 @@ just place your resume in the 'assets' directory and add the name of the file in
 
 ```javascript
 var data = {
-  name : 'YOUR NAME HERE',
+  name : [
+    {name: 'Name', value: 'YOUR NAME HERE'}
+  ],
   bio: [
     {name: 'Name', value: 'YOUR NAME HERE'},
     {name: 'Email', value: 'YOUR EMAIL HERE'}
   ],
-  github: 'YOUR GITHUB USERNAME HERE',
+  github: [
+    {name: 'GitHub', value: 'YOUR GITHUB USERNAME HERE'}
+  ],
   projects: [
-    {name: 'ProjectName1', url: 'PROJECT LINK HERE'},
-    {name: 'ProjectName1', url: 'PROJECT LINK HERE'}
+    {name: 'ProjectName1', value: 'PROJECT LINK HERE'},
+    {name: 'ProjectName1', value: 'PROJECT LINK HERE'}
   ],
   resume: 'ResumeName.pdf',
   socials: [
-    {name: 'LinkedIn', url: 'SITE URL'},
-    {name: 'Github', url: 'SITE URL'}
+    {name: 'LinkedIn', value: 'SITE URL'},
+    {name: 'Github', value: 'SITE URL'}
   ]
 }
 ```
