@@ -3,28 +3,25 @@ let terminalBody = document.querySelector("#terminalBody");
 
 let commandList = ['bio', 'clear', 'echo', 'github', 'name', 'projects', 'resume', 'socials'];
 
-functionCalls();
-
-function functionCalls() {
+const functionCalls = () => {
     checkWindowClick();
     checkPressedEnter();
 }
 
-function checkWindowClick() {
-    terminalBody.addEventListener ('click', function(event){
-        input.focus();
-    });
+
+const checkWindowClick = () => {
+    terminalBody.addEventListener('click', () => input.focus());
 }
 
-function checkPressedEnter() {
-    input.addEventListener('keydown', function(e){
+const checkPressedEnter = () => {
+    input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             execute(input.value);
         }
     });
 }
 
-function execute(inputValue) {
+const execute = (inputValue) => {
     let temp = input.value;
     input.remove();
     terminalBody.innerHTML += temp;
@@ -32,24 +29,25 @@ function execute(inputValue) {
     addInput();
 }
 
-function executeCommand(command){
+const executeCommand = (command) => {
 
-    terminalBody.innerHTML += '<br><br>'
+    terminalBody.innerHTML += '<br />'
 
     for(let i=0; i<data[command].length; ++i){
 
         terminalBody.innerHTML += `${data[command][i].name}: ` ;
 
         if(data[command][i].value.includes('http')){
-            terminalBody.innerHTML += `<a href="${data[command][i].value}" target="_blank">${data[command][i].value}</a><br>` ;
+            terminalBody.innerHTML += `<a href="${data[command][i].value}" target="_blank">${data[command][i].value}</a>` ;
         } else{
-            terminalBody.innerHTML += `${data[command][i].value}<br>` ;
+            terminalBody.innerHTML += `${data[command][i].value}` ;
         }
     }
 }
 
-function checkCommand(inputCommand){
+const checkCommand = (inputCommand) => {
 
+    terminalBody.innerHTML += '<br>';
     let command = inputCommand.split(" ")[0];
 
     if(command){
@@ -60,12 +58,10 @@ function checkCommand(inputCommand){
         else if(command === 'resume'){ commandResume();}
         else if(commandList.includes(command)){ executeCommand(command);}
         else{
-            terminalBody.innerHTML +=  '<br>' + inputCommand + ' is not recognized as a command, Try \"help\"<br>';
+            terminalBody.innerHTML +=  inputCommand + ' is not recognized as a command, Try \"help\"';
         }
     }
-    else {
-        terminalBody.innerHTML += '<br>';
-    }
+    terminalBody.innerHTML += '<br>';
 }
 
 function addInput() {
@@ -75,30 +71,25 @@ function addInput() {
     functionCalls();
 }
 
-function commandClear() {
-    terminalBody.innerHTML = ``;
-}
+const commandClear = () => { terminalBody.innerHTML = '' }
 
 function commandHelp() {
-    terminalBody.innerHTML += '<br><br>';
-    for(let i=0; i<commandList.length; i++) {
-        terminalBody.innerHTML += `${commandList[i]}<br>`
-    }
+    terminalBody.innerHTML += `<br />${commandList.join('<br />')}`;
 }
 
 function commandGithub() {
-    terminalBody.innerHTML += `<br><i class="fa fa-github"> <a href="https://github.com/${data.github[0].value}" target="_blank">${data.github[0].value}</a><br>`;
-    terminalBody.innerHTML += '<br>';
+    terminalBody.innerHTML += `<i class="fa fa-github"> <a href="https://github.com/${data.github[0].value}" target="_blank">${data.github[0].value}</a>`;
 }
 
 function commandResume() {
-    terminalBody.innerHTML += `<br><a href=assets/${data.resume}>Resume</a><br>`;
+    terminalBody.innerHTML += `<a href=assets/${data.resume}>Resume</a>`;
 }
 
 function commandEcho(inputCommand) {
-    terminalBody.innerHTML += '<br>';
     for(let i=1; i<inputCommand.split(' ').length; i++){
         terminalBody.innerHTML += inputCommand.split(' ')[i] + ' ';
     }
     terminalBody.innerHTML += '<br>';
 }
+
+functionCalls();
