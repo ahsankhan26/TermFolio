@@ -19,7 +19,7 @@
 
 <h1 id="setup">Setup</h1>
 
-Just clone the repository and update the data.js file
+1. Clone the repository
 
 ```ruby
 # Clone this repository
@@ -27,9 +27,9 @@ $ git clone https://github.com/ahsankhan26/TermFolio.git
 
 # Go to the repository folder
 $ cd TermFolio
-
-# Open the file(data.js)
 ```
+2. Open the `index.html` file in your browser to view the site
+
 <h4>Resume</h4>
 
 just place your resume in the 'assets' directory and add the name of the file in 'data.js'.
